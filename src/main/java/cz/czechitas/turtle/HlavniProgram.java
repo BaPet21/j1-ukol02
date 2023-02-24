@@ -15,14 +15,41 @@ public class HlavniProgram {
         zofka.setLocation(220,200);
         kolecko();*/
 
-        zofka.setLocation(100, 60);
+        /*zofka.setLocation(100, 60);
         trojuhelnik(80,Color.RED);
         zofka.setLocation(200, 100);
         nakresliCtverec(70,Color.GREEN);
         zofka.setLocation(300, 100);
         nakresliObdelnik(90, 40,Color.PINK);
         zofka.setLocation(400, 50);
-        nakresliKolecko(15,10,Color.YELLOW);
+        nakresliKolecko(15,10,Color.YELLOW);*/
+
+        //zmrzlina
+        /*zofka.setLocation(180,100);
+        nakresliKolecko(15,20,Color.GREEN);
+
+        zofka.setLocation(180,120);
+
+       trojuhelnik(125,Color.YELLOW);*/
+
+        // snehulak
+        zofka.setLocation(380,100);
+        nakresliKolecko(20,20,Color.PINK);
+        zofka.setLocation(280,190);
+        nakresliKolecko(15,20,Color.PINK);
+        zofka.setLocation(255,358);
+        nakresliKolecko(15,30,Color.PINK);
+
+        zofka.setLocation(200,200);
+        nakresliKolecko(20,10,Color.PINK);
+
+        zofka.setLocation(420,250);
+        nakresliKolecko(20,10,Color.PINK);
+
+
+
+
+
 
 
     }
@@ -65,11 +92,15 @@ public class HlavniProgram {
 
     private void trojuhelnik(double velikostStrany,Color barvaTuzky) {
         for (int i = 0; i < 3; i++) {
-            zofka.turnLeft(60);
+            zofka.turnLeft(120);
             zofka.move(velikostStrany);
-            zofka.turnLeft(60);
+            zofka.turnLeft(120);
         }
         zofka.setPenColor(barvaTuzky);
+    }
+    private void rovnoramennyTrojuhelnik(double velikostStranyA, double velikostStranyC, Color barvaTuzky){
+        //var velikostPrepony = Math.sqrt(2*Math.pow(velikostStrany, 2));
+        //Math.pow() umocní první pamater na hodnotu druhého parametru. Math.sqrt() vypočítá druhou odmocninu.
     }
 
     private void nakresliCtverec(double velikostStrany, Color barvaTuzky) {
@@ -80,7 +111,7 @@ public class HlavniProgram {
         zofka.setPenColor(barvaTuzky);
     }
 
-    private void nakresliObdelnik(int velikostStrany1, int velikostStrany2,Color barvaTuzky) {
+    private void nakresliObdelnik(double velikostStrany1, double velikostStrany2,Color barvaTuzky) {
         for (int i = 0; i < 2; i++) {
             zofka.move(velikostStrany1);
             zofka.turnLeft(90);
@@ -91,7 +122,7 @@ public class HlavniProgram {
 
     }
 
-    private void nakresliKolecko(int velikostStrany, int uhel,Color barvaTuzky) {
+    private void nakresliKolecko(double velikostStrany, double uhel,Color barvaTuzky) {
         for (int i = 0; i < 24; i++) {
             zofka.turnLeft(velikostStrany);
             zofka.move(uhel);
