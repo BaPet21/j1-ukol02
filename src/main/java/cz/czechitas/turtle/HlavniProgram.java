@@ -65,6 +65,13 @@ public class HlavniProgram {
         zofka.turnRight(25);
         rovnoramennyTrojuhelnik(100,Color.DARK_GRAY);
 
+        // zmrzlina
+        zofka.setLocation(165,135);
+        nakresliKolecko(18,20,Color.GREEN);
+        zofka.setLocation(170,120);
+
+        zofka.turnLeft(62);
+        nakresliTrojuhelnik();
 
 
 
@@ -78,11 +85,12 @@ public class HlavniProgram {
 
 
     private void nakresliTrojuhelnik() {
-        for (int i = 0; i < 3; i++) {
-            zofka.turnRight(60);
-            zofka.move(100);
-            zofka.turnRight(60);
-        }
+            zofka.move(120);
+            zofka.turnLeft(120);
+            zofka.move(120);
+            zofka.turnLeft(120);
+            zofka.move(120);
+
     }
 
     private void ctverec() {
@@ -110,9 +118,9 @@ public class HlavniProgram {
 
     private void trojuhelnik(double velikostStrany,Color barvaTuzky) {
         for (int i = 0; i < 3; i++) {
-            zofka.turnRight(120);
+            zofka.turnLeft(60);
             zofka.move(velikostStrany);
-            zofka.turnRight(120);
+            zofka.turnLeft(60);
         }
         zofka.setPenColor(barvaTuzky);
     }
